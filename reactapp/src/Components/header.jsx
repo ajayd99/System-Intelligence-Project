@@ -8,7 +8,7 @@ function header(props) {
     <div class="container d-flex align-items-center">
 
         <h1 class="logo me-auto"><a href="index.html">Sailor</a></h1>
-        <a href="index.html" class="logo me-auto"><img src="public/SIL logo.png" alt="" class="img-fluid"></img></a>
+        <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></img></a>
 
         <nav id="navbar" class="navbar">
         <ul>
