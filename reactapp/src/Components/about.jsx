@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-function footer(props) {
+function about(props) {
   return (
     <section id="about" class="about">
     <div class="container">
@@ -187,3 +187,5 @@ function footer(props) {
 
   );
 }
+
+export default withRouter(about);
