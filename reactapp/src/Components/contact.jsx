@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-function contact(props) {
+function Contact(props) {
   return (
     <section id="contact" className="contact">
   <div className="container">
@@ -59,4 +59,4 @@ function contact(props) {
 
 }
 
-export default withRouter(contact);
+export default withRouter(Contact);

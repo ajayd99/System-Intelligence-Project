@@ -1,6 +1,6 @@
-export { default as header } from "./header";
-export { default as footer } from "./footer";
-export { default as home } from "./home";
-export { default as services } from "./services";
-export { default as about } from "./about";
-export { default as contact } from "./contact";
+export { default as Header } from "./Header";
+export { default as Footer } from "./Footer";
+export { default as Home } from "./Home";
+export { default as Services } from "./Services";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-function footer(props) {
+function Footer(props) {
   return (
 
     <footer id="footer">
@@ -73,4 +73,4 @@ function footer(props) {
     );
 }
 
-export default withRouter(footer);
+export default withRouter(Footer);

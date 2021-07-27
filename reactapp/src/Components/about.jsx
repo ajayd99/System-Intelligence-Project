@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-function about(props) {
+function About(props) {
   return (
     <div>
   <section id="about" className="about">
@@ -160,4 +160,4 @@ function about(props) {
   );
 }
 
-export default withRouter(about);
+export default withRouter(About);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-function header(props) {
+function Header(props) {
   return (
 
     <header id="header" className="fixed-top d-flex align-items-center">
@@ -42,4 +42,4 @@ function header(props) {
     );
 }  
 
-export default withRouter(header);
+export default withRouter(Header);

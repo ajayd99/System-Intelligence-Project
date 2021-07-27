@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-function home(props) {
+function Home(props) {
   return (
     
     <div>
@@ -290,4 +290,4 @@ function home(props) {
     );
 }  
 
-export default withRouter(home);
+export default withRouter(Home);
