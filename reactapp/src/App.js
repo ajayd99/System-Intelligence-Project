@@ -1,4 +1,28 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Navigation, Footer, Home, About, Contact, services, home, about, contact } from "./components";
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <header />
+        <Switch>
+          <Route path="/" exact component={() => <home />} />
+          <Route path="/services" exact component={() => <services />} />
+          <Route path="/about" exact component={() => <about />} />
+          <Route path="/contact" exact component={() => <contact />} />
+        </Switch>
+        <footer />
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
