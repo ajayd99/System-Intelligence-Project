@@ -10,12 +10,10 @@ function Footer(props) {
       <div className="row">
         <div className="col-lg-3 col-md-6">
           <div className="footer-info">
-            <h3>Sailor</h3>
+            <h3>System Intelligence Ltd.</h3>
             <p>
-              A108 Adam Street <br />
-              NY 535022, USA<br /><br />
-              <strong>Phone:</strong> +1 5589 55488 55<br />
-              <strong>Email:</strong> info@example.com<br />
+              <strong>Phone:</strong> 01453 873530<br />
+              <strong>Email:</strong> enquiry@sysint.biz<br />
             </p>
             <div className="social-links mt-3">
               <a href="#" className="twitter"><i className="bx bxl-twitter" /></a>
@@ -46,13 +44,7 @@ function Footer(props) {
             <li><i className="bx bx-chevron-right" /> <a href="#">Graphic Design</a></li>
           </ul>
         </div>
-        <div className="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          <form action method="post">
-            <input type="email" name="email" /><input type="submit" defaultValue="Subscribe" />
-          </form>
-        </div>
+        
       </div>
     </div>
   </div>

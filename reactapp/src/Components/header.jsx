@@ -14,6 +14,7 @@ function Header(props) {
 
     <header id="header" className="fixed-top d-flex align-items-center">
       <div className="container d-flex align-items-center">
+
         <h1 className="logo me-auto"><a href= {home} >System Intelligence Ltd.</a></h1>
         <a href="index.html" className="logo me-auto"><img src= {logo} alt className="img-fluid" /></a>
         
@@ -34,7 +35,7 @@ function Header(props) {
           </ul>
           <i className="bi bi-list mobile-nav-toggle" />
         </nav>
-        
+
       </div>
     </header>
 
