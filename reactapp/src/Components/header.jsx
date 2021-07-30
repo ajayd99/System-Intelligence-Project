@@ -7,37 +7,61 @@ import about from '../components/About.jsx';
 import contact from '../components/Contact.jsx';
 
 
-
-
 function Header(props) {
   return (
 
-    <header id="header" className="fixed-top d-flex align-items-center">
-      <div className="container d-flex align-items-center">
+     <div className="navigation">  
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+          <div class="container">
+            <Link class="navbar-brand" to="/">
+              System Intelligence Ltd.
+            </Link>
 
-        <h1 className="logo me-auto"><a href= {home} >System Intelligence Ltd.</a></h1>
-        <a href="index.html" className="logo me-auto"><img src= {logo} alt className="img-fluid" /></a>
+            <div>
+            <ul class="navbar-nav ml-auto">
+              <li
+                class={`nav-item  ${
+                  props.location.pathname === "/" ? "active" : ""
+                }`}
+              >
+                <Link class="nav-link" to="/">
+                  Home
+                  <span class="sr-only">(current)</span>
+                </Link>
+              </li>
+              <li
+                class={`nav-item  ${
+                  props.location.pathname === "/services" ? "active" : ""
+                }`}
+              >
+                <Link class="nav-link" to="/services">
+                  About
+                </Link>
+              </li>
+              <li
+                class={`nav-item  ${
+                  props.location.pathname === "/about" ? "active" : ""
+                }`}
+              >
+                <Link class="nav-link" to="/about">
+                  About
+                </Link>
+              </li>
+              <li
+                class={`nav-item  ${
+                  props.location.pathname === "/contact" ? "active" : ""
+                }`}
+              >
+                <Link class="nav-link" to="/contact">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         
-        <nav id="navbar" className="navbar">
-          <ul>
-            <li><a href= {home} className="active">Home</a></li>
-            <li className="dropdown"><a href= {services}><span>Services</span> <i className="bi bi-chevron-down" /></a>
-              <ul>
-                <li><a href="about.html">Consultancy</a></li>
-                <li><a href="team.html">Development</a></li>
-                <li><a href="testimonials.html">Recruitment</a></li>
-                <li><a href="testimonials.html">System Integration</a></li>
-                <li><a href="testimonials.html">Cloud</a></li>
-              </ul>
-            </li>
-            <li><a href= {about}>About</a></li>
-            <li><a href= {contact} className="getstarted">Contact Us</a></li>
-          </ul>
-          <i className="bi bi-list mobile-nav-toggle" />
-        </nav>
-
-      </div>
-    </header>
+          </div>
+        </nav>  
+      </div>  
 
     );
 }  
