@@ -1,18 +1,12 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-import logo from '../SIL-logo.PNG';
-import home from '../components/Home.jsx';
-import services from '../components/Services.jsx';
-import about from '../components/About.jsx';
-import contact from '../components/Contact.jsx';
-
-
 function Header(props) {
   return (
 
-     <div id="header" className="fixed-top d-flex align-items-center"> 
-      <div class="container d-flex align-items-center">
+     <div> 
+      <header id="header" className="fixed-top d-flex align-items-center"> 
+      <div className="container d-flex align-items-center">
 
       
         <nav id="navbar" className="navbar">
@@ -63,6 +57,7 @@ function Header(props) {
 
         </nav> 
         </div> 
+        </header>
       </div>  
 
     );

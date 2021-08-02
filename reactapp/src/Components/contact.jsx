@@ -13,9 +13,21 @@ function Contact(props) {
             <div className="col-md-6 form-group mt-3 mt-md-0">
               <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
             </div>
-          </div>
-          <div className="form-group mt-3">
-            <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
+            <div className="col-md-6 form-group mt-3 mt-md-0">
+              <input type="number" className="form-control" name="phone" id="phone" placeholder="Your Telephone Number" required />
+            </div>
+            <div className="col-md-6 form-group mt-3 mt-md-0">
+              <select className="form-control" name="subject" id="subject" required>
+                <option value="none" selected disabled hidden>
+                  Select a Subject
+               </option>
+                <option value="volvo">Consultancy</option>
+                <option value="saab">Development</option>
+                <option value="saab">Recruitment</option>
+                <option value="saab">System Integration</option>
+                <option value="saab">Cloud</option>
+              </select>  
+            </div>
           </div>
           <div className="form-group mt-3">
             <textarea className="form-control" name="message" rows={5} placeholder="Message" required defaultValue={""} />
@@ -25,7 +37,7 @@ function Contact(props) {
             <div className="error-message" />
             <div className="sent-message">Your message has been sent. Thank you!</div>
           </div>
-          <div className="text-center"><button type="submit">Send Message</button></div>
+          <div className="text-center"><button type="submit">Send Enquiry</button></div>
         </form>
       </div>
     </section>

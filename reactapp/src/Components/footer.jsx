@@ -12,16 +12,11 @@ function Footer(props) {
           <div className="footer-info">
             <h3>System Intelligence Ltd.</h3>
             <p>
+              4, Lawns Park, <br/> Stroud, Gloucestershire, <br/> GL5 5PP <br/>
               <strong>Phone:</strong> 01453 873530<br />
               <strong>Email:</strong> enquiry@sysint.biz<br />
+
             </p>
-            <div className="social-links mt-3">
-              <a href="#" className="twitter"><i className="bx bxl-twitter" /></a>
-              <a href="#" className="facebook"><i className="bx bxl-facebook" /></a>
-              <a href="#" className="instagram"><i className="bx bxl-instagram" /></a>
-              <a href="#" className="google-plus"><i className="bx bxl-skype" /></a>
-              <a href="#" className="linkedin"><i className="bx bxl-linkedin" /></a>
-            </div>
           </div>
         </div>
         <div className="col-lg-2 col-md-6 footer-links">
@@ -37,11 +32,11 @@ function Footer(props) {
         <div className="col-lg-3 col-md-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i className="bx bx-chevron-right" /> <a href="#">Web Design</a></li>
-            <li><i className="bx bx-chevron-right" /> <a href="#">Web Development</a></li>
-            <li><i className="bx bx-chevron-right" /> <a href="#">Product Management</a></li>
-            <li><i className="bx bx-chevron-right" /> <a href="#">Marketing</a></li>
-            <li><i className="bx bx-chevron-right" /> <a href="#">Graphic Design</a></li>
+            <li><i className="bx bx-chevron-right" /> Consultancy</li>
+            <li><i className="bx bx-chevron-right" /> Development</li>
+            <li><i className="bx bx-chevron-right" /> Recruitment</li>
+            <li><i className="bx bx-chevron-right" /> System integration</li>
+            <li><i className="bx bx-chevron-right" /> Cloud</li>
           </ul>
         </div>
         
