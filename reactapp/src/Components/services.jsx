@@ -4,6 +4,31 @@ import { Link, withRouter } from "react-router-dom";
 function Services(props) {
   return (
     <div>
+      <section id="breadcrumbs" className="breadcrumbs">
+      <div className="container">
+        <div className="d-flex justify-content-between align-items-center">
+          <h2>Services</h2>
+          <ol>
+            <li
+                className={`nav-item  ${
+                  props.location.pathname === "/" ? "active" : ""
+                }`}
+              >
+                <Link to="/">
+                  Home
+                </Link>
+              </li>
+            <li>Services</li>
+          </ol>
+        </div>
+      </div>
+   </section>
+
+
+
+
+
+
   <section id="services" className="services">
     <div className="container">
       <div className="row">

@@ -15,8 +15,8 @@ function Header(props) {
               <h1>System Intelligence Ltd. </h1>
             </Link>
 
-            <ul className="navbar-nav ml-auto">
-              <li 
+            <ul>
+              <li className="dropdown"
                 className={`nav-item  ${
                   props.location.pathname === "/" ? "active" : ""
                 }`}

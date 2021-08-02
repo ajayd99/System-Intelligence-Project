@@ -3,6 +3,28 @@ import { Link, withRouter } from "react-router-dom";
 
 function Contact(props) {
   return (
+
+    <div>
+    <section id="breadcrumbs" className="breadcrumbs">
+      <div className="container">
+        <div className="d-flex justify-content-between align-items-center">
+          <h2>Contact</h2>
+          <ol>
+            <li
+                className={`nav-item  ${
+                  props.location.pathname === "/" ? "active" : ""
+                }`}
+              >
+                <Link to="/">
+                  Home
+                </Link>
+              </li>
+            <li>Contact</li>
+          </ol>
+        </div>
+      </div>
+   </section>
+
     <section id="contact" className="contact">
       <div className="col-lg-8 mt-5 mt-lg-0">
         <form action="forms/contact.php" method="post" role="form" className="php-email-form">
@@ -41,6 +63,7 @@ function Contact(props) {
         </form>
       </div>
     </section>
+    </div>
 
   );
 

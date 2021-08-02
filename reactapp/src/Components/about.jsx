@@ -4,7 +4,27 @@ import { Link, withRouter } from "react-router-dom";
 function About(props) {
   return (
 
-    <div>
+  <div>
+    <section id="breadcrumbs" className="breadcrumbs">
+      <div className="container">
+        <div className="d-flex justify-content-between align-items-center">
+          <h2>About</h2>
+          <ol>
+            <li
+                className={`nav-item  ${
+                  props.location.pathname === "/" ? "active" : ""
+                }`}
+              >
+                <Link to="/">
+                  Home
+                </Link>
+              </li>
+            <li>About</li>
+          </ol>
+        </div>
+      </div>
+   </section>
+    
   <section id="about" className="about">
     <div className="container">
       <div className="row content">
@@ -23,19 +43,14 @@ function About(props) {
             <li><i className="ri-check-double-line" /> Mitie</li>
             <li><i className="ri-check-double-line" /> Your Housing Group</li>
             <li><i className="ri-check-double-line" /> Vivista</li>
-            <li><i className="ri-check-double-line" /> EPSRC</li>
             <li><i className="ri-check-double-line" /> Leaseplan</li>
             <li><i className="ri-check-double-line" /> AssureSoft</li>
             <li><i className="ri-check-double-line" /> Nationwide</li>
-            <li><i className="ri-check-double-line" /> Marlborough Sterling</li>
-            <li><i className="ri-check-double-line" /> Alamy</li>
             <li><i className="ri-check-double-line" /> Prudential</li>
             <li><i className="ri-check-double-line" /> Harrods</li>
             <li><i className="ri-check-double-line" /> Barclays Capitol</li>
             <li><i className="ri-check-double-line" /> BT</li>
-            <li><i className="ri-check-double-line" /> Hyder</li>
-            <li><i className="ri-check-double-line" /> GAEC</li>
-            <li><i className="ri-check-double-line" /> Internet Systems</li> 
+    
           </ul>
           <p className="fst-italic">
             As with all of our previous and existing clients we aim to provide YOU with the 
