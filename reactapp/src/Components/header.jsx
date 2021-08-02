@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+
 import logo from '../SIL-logo.PNG';
 import home from '../components/Home.jsx';
 import services from '../components/Services.jsx';
@@ -10,57 +11,58 @@ import contact from '../components/Contact.jsx';
 function Header(props) {
   return (
 
-     <div className="navigation">  
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
-          <div class="container">
-            <Link class="navbar-brand" to="/">
-              System Intelligence Ltd.
+     <div id="header" className="fixed-top d-flex align-items-center"> 
+      <div class="container d-flex align-items-center">
+
+      
+        <nav id="navbar" className="navbar">
+  
+            <Link className="logo me-auto" to="/">
+              <h1>System Intelligence Ltd. </h1>
             </Link>
 
-            <div>
-            <ul class="navbar-nav ml-auto">
-              <li
-                class={`nav-item  ${
+            <ul className="navbar-nav ml-auto">
+              <li 
+                className={`nav-item  ${
                   props.location.pathname === "/" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/">
+                <Link  to="/">
                   Home
-                  <span class="sr-only">(current)</span>
                 </Link>
               </li>
               <li
-                class={`nav-item  ${
+                className={`nav-item  ${
                   props.location.pathname === "/services" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/services">
-                  About
+                <Link to="/services">
+                  Services
                 </Link>
               </li>
               <li
-                class={`nav-item  ${
+                className={`nav-item  ${
                   props.location.pathname === "/about" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/about">
+                <Link to="/about">
                   About
                 </Link>
               </li>
               <li
-                class={`nav-item  ${
+                className={`nav-item  ${
                   props.location.pathname === "/contact" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/contact">
+                <Link className="contactus" to="/contact">
                   Contact
                 </Link>
               </li>
             </ul>
-          </div>
-        
-          </div>
-        </nav>  
+            <i className="bi bi-list mobile-nav-toggle"></i>
+
+        </nav> 
+        </div> 
       </div>  
 
     );
