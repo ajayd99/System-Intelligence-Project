@@ -25,36 +25,34 @@ function Contact(props) {
       </div>
    </section>
 
-   <section id="contact" className="contact">
-  <div className="container">
-    <div>
-    <iframe style={{"border":"0","width":"100%","height":"270px"}} src="https://www.google.com/maps/embed/v1/place?q=4,+lawns+park,+north+woodchester,+gl55pp&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"frameBorder={0} allowFullScreen />
-    </div>
-    <div className="row mt-5">
-      <div className="col-lg-4">
-        <div className="info">
-          <div className="address">
-            <i className="bi bi-geo-alt" />
-            <h4>Location:</h4>
-            <p>4, Lawns Park, North Woodchester, Stroud, GL55PP</p>
-          </div>
-          <div className="email">
-            <i className="bi bi-envelope" />
-            <h4>Email:</h4>
-            <p>Enquiry@sysint.biz</p>
-          </div>
-          <div className="phone">
-            <i className="bi bi-phone" />
-            <h4>Call:</h4>
-            <p>01453873530</p>
+  <section id="contact" className="contact">
+    <div className="container">
+      <div>
+      <iframe style={{"border":"0","width":"100%","height":"270px"}} src="https://www.google.com/maps/embed/v1/place?q=4,+lawns+park,+north+woodchester,+gl55pp&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"frameBorder={0} allowFullScreen />
+      </div>
+
+      <div className="row mt-5">
+        <div className="col-lg-4">
+          <div className="info">
+            <div className="address">
+              <i className="bi bi-geo-alt" />
+              <h4>Location:</h4>
+              <p>4, Lawns Park, North Woodchester, Stroud, GL55PP</p>
+            </div>
+            <div className="email">
+              <i className="bi bi-envelope" />
+              <h4>Email:</h4>
+              <p>Enquiry@sysint.biz</p>
+            </div>
+            <div className="phone">
+              <i className="bi bi-phone" />
+              <h4>Call:</h4>
+              <p>01453873530</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    </div>
-    </section>
+   
 
-    <section id="contact" className="contact">
       <div className="col-lg-8 mt-5 mt-lg-0">
         <form action="forms/contact.php" method="post" role="form" className="php-email-form">
           <div className="row">
@@ -90,6 +88,8 @@ function Contact(props) {
           </div>
           <div className="text-center"><button type="submit">Send Enquiry</button></div>
         </form>
+      </div>
+      </div>
       </div>
     </section>
     </div>
