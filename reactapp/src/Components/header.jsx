@@ -18,7 +18,7 @@ function Header(props) {
         <nav id="navbar" className="navbar">
           
             <ul>
-              <li className="dropdown"
+              <li className="active"
                 className={`nav-item  ${
                   props.location.pathname === "/" ? "active" : ""
                 }`}
@@ -50,12 +50,12 @@ function Header(props) {
                   props.location.pathname === "/contact" ? "active" : ""
                 }`}
               >
-                <Link className="contactus" to="/contact">
+                <Link className="getstarted" to="/contact">
                   Contact
                 </Link>
               </li>
             </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
+            <i classname="bi bi-list mobile-nav-toggle"></i>
 
         </nav> 
         </div> 
