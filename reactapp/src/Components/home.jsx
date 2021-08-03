@@ -11,6 +11,7 @@ import image3 from '../slide/slide-3.jpg'
 function Home(props) {
   return (
     <div>
+     
       <div className='container-fluid' >
         <div className="row">
         <div className="col-sm-12">
@@ -59,37 +60,13 @@ function Home(props) {
         </div>
       </div>
 
+      <main id="main"> 
+      <br></br>
+      <br></br>        
+      </main>
 
-  <main id="main">
-    {/* ======= About Section ======= */}
-    <section id="about" className="about">
-      <div className="container">
-        <div className="row content">
-          <div className="col-lg-6">
-            <h2>Eum ipsam laborum deleniti velitena</h2>
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
-          </div>
-          <div className="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <ul>
-              <li><i className="ri-check-double-line" /> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-              <li><i className="ri-check-double-line" /> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i className="ri-check-double-line" /> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
-            </ul>
-            <p className="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>{/* End About Section */}
-  </main>
     </div>
+
 
     );
 }  

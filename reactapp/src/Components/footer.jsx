@@ -35,7 +35,7 @@ function Footer(props) {
             <li><i className="bx bx-chevron-right" /> Consultancy</li>
             <li><i className="bx bx-chevron-right" /> Development</li>
             <li><i className="bx bx-chevron-right" /> Recruitment</li>
-            <li><i className="bx bx-chevron-right" /> System integration</li>
+            <li><i className="bx bx-chevron-right" /> System Integration</li>
             <li><i className="bx bx-chevron-right" /> Cloud</li>
           </ul>
         </div>

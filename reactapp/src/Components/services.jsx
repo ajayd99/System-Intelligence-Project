@@ -3,7 +3,10 @@ import { Link, withRouter } from "react-router-dom";
 
 function Services(props) {
   return (
+
     <div>
+      <body>
+
       <section id="breadcrumbs" className="breadcrumbs">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
@@ -23,11 +26,6 @@ function Services(props) {
         </div>
       </div>
    </section>
-
-
-
-
-
 
   <section id="services" className="services">
     <div className="container">
@@ -75,7 +73,7 @@ function Services(props) {
       </div>
     </div>
   </section>
- 
+ </body>
 </div>
 
 

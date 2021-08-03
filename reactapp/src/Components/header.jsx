@@ -8,20 +8,22 @@ function Header(props) {
       <header id="header" className="fixed-top d-flex align-items-center"> 
       <div className="container d-flex align-items-center">
 
-      
-        <nav id="navbar" className="navbar">
-  
-            <Link className="logo me-auto" to="/">
-              <h1>System Intelligence Ltd. </h1>
-            </Link>
+        <h1 className="logo me-auto"> 
+          <Link to="/">
+              System Intelligence Ltd. 
+          </Link>
+        </h1>
+            
 
+        <nav id="navbar" className="navbar">
+          
             <ul>
               <li className="dropdown"
                 className={`nav-item  ${
                   props.location.pathname === "/" ? "active" : ""
                 }`}
               >
-                <Link  to="/">
+                <Link to="/">
                   Home
                 </Link>
               </li>

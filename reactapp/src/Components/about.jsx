@@ -5,6 +5,7 @@ function About(props) {
   return (
 
   <div>
+  
     <section id="breadcrumbs" className="breadcrumbs">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
@@ -29,9 +30,6 @@ function About(props) {
     <div className="container">
       <div className="row content">
         <div className="col-lg-6">
-          <h2>Get to know the business</h2>
-        </div>
-        <div className="col-lg-6 pt-4 pt-lg-0">
           <p>
           System Intelligence was founded 26 years ago. Its aim is to provide the very best in business solutions using leading edge technology. 
           To this end it recieved accreditation as a Microsoft Partner and and has worked closely both with its consultants and partners. 
