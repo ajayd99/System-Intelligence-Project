@@ -436,11 +436,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   opacity: .6;
   transition: 0.3s;
+  list-style-type: none;
 }
 
 #hero .carousel-indicators li.active {
   opacity: 1;
   background: #d9232d;
+  list-style-type: none;
 }
 
 #hero .btn-get-started {
@@ -457,11 +459,19 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   background: #d9232d;
+  list-style-type: none;
+  
 }
 
 #hero .btn-get-started:hover {
   background: #df3740;
+  list-style-type: none;
 }
+
+.get-started {
+  list-style-type: none;
+}
+
 
 @media (max-width: 992px) {
   #hero {
@@ -489,6 +499,28 @@ h1, h2, h3, h4, h5, h6 {
     height: 120vh;
   }
 }
+
+.readmore {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  line-height: 1;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  background: #d9232d;
+}
+
+.readmore:hover {
+  background: #df3740;
+
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
