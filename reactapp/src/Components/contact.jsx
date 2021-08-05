@@ -27,7 +27,7 @@ class Contact extends React.Component {
   handleSubmit = (event) => {
     alert('A form was submitted: ' + this.state);
 
-    fetch('https://sil-web-cosmosdb-fa.azurewebsites.net/api/enquiry-post?', {
+    fetch('https://sil-web-cosmosdb-fa.azurewebsites.net/api/enquiry-post?clientId=default', {
         method: 'POST',
         // We convert the React state to JSON and send it as the POST body
         body: JSON.stringify(this.state)
@@ -50,7 +50,7 @@ render(){
           <ol>
             <li
                 className={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
+                  this.props.location.pathname === "/" ? "active" : ""
                 }`}
               >
                 <Link to="/">

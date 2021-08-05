@@ -13,7 +13,8 @@ function Home(props) {
     <div>
      
      <section id="hero">
-
+    
+     <div id="heroCarousel" className="carousel slide carousel-fade">"
      <ol className="carousel-indicators" id="hero-carousel-indicators"></ol>
 
      <div className="carousel-inner" role="listbox">
@@ -124,6 +125,7 @@ function Home(props) {
         </Link>
         **/}
 
+      </div>
       </div>
       </div>
       </section>

@@ -468,7 +468,7 @@ h1, h2, h3, h4, h5, h6 {
   list-style-type: none;
 }
 
-.get-started {
+#hero .get-started {
   list-style-type: none;
 }
 
@@ -514,10 +514,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   background: #d9232d;
+  list-style-type: none;
 }
 
 .readmore:hover {
   background: #df3740;
+  list-style-type: none;
 
 }
 
