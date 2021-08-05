@@ -5,39 +5,45 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: '', email:'', phone:'', subject:'', message:''};
+
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePhoneChange = this.handlePhoneChange.bind(this);
+    this.handleSubjectChange = this.handleSubjectChange.bind(this);
+    this.handleMessageChange = this.handleMessageChange.bind(this);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleNameChange = (event) => {
     this.setState({[event.target.name]: event.target.value});
   }
   handleEmailChange = (event) => {
-    this.setState({[event.target.email]: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
   }
   handlePhoneChange = (event) => {
-    this.setState({[event.target.phone]: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
   }
   handleSubjectChange = (event) => {
-    this.setState({[event.target.subject]: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
   }
   handleMessageChange = (event) => {
-    this.setState({[event.target.message]: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
   }
 
-
   handleSubmit = (event) => {
-    alert('A form was submitted: ' + this.state);
-
-    fetch('https://sil-web-cosmosdb-fa.azurewebsites.net/api/enquiry-post?', {
+    console.log('A form was submitted: ' + JSON.stringify(this.state));
+    fetch('https://sil-web-cosmosdb-fa.azurewebsites.net/api/enquiry-post?clientId=default', {
         method: 'POST',
         // We convert the React state to JSON and send it as the POST body
+        //body: JSON.stringify(this.state)
         body: JSON.stringify(this.state)
       }).then(function(response) {
-        console.log(response)
+        console.log(response);
         return response.json();
       });
-
     event.preventDefault();
-}
+  }
 
 render(){
   return (
@@ -50,7 +56,7 @@ render(){
           <ol>
             <li
                 className={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
+                  this.props.location.pathname === "/" ? "active" : ""
                 }`}
               >
                 <Link to="/">
@@ -91,7 +97,7 @@ render(){
         </div>
 
       <div className="col-lg-8 mt-5 mt-lg-0">
-        <form action={this.handleSubmit} method="post" role="form" className="php-email-form">
+        <form onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="col-md-6 form-group">
               <input type="text" value={this.state.name.value} name="name" onChange={this.handleNameChange} className="form-control" id="name" placeholder="Your Name" required />
