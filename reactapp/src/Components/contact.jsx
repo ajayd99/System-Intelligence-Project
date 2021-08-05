@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', email:'', phone:'', subject:'', message:''};
+    this.state = { name: '', email:'', phone:'', subject:'', message:'', posted:false};
 
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -39,6 +39,7 @@ class Contact extends React.Component {
         //body: JSON.stringify(this.state)
         body: JSON.stringify(this.state)
       }).then(function(response) {
+        this.setState({["posted"]: true});
         console.log(response);
         return response.json();
       });
@@ -97,7 +98,7 @@ render(){
         </div>
 
       <div className="col-lg-8 mt-5 mt-lg-0">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} class="php-email-form">
           <div className="row">
             <div className="col-md-6 form-group">
               <input type="text" value={this.state.name.value} name="name" onChange={this.handleNameChange} className="form-control" id="name" placeholder="Your Name" required />
@@ -113,23 +114,23 @@ render(){
                 <option value={this.state.subject.value} selected disabled hidden>
                   Select a Subject
                </option>
-                <option value="volvo">Consultancy</option>
-                <option value="saab">Development</option>
-                <option value="saab">Recruitment</option>
-                <option value="saab">System Integration</option>
-                <option value="saab">Cloud</option>
+                <option value="Consultancy">Consultancy</option>
+                <option value="Development">Development</option>
+                <option value="Recruitment">Recruitment</option>
+                <option value="Integration">System Integration</option>
+                <option value="Cloud">Cloud</option>
               </select>  
             </div>
           </div>
           <div className="form-group mt-3">
             <textarea value={this.state.message.value} name="message" rows={5} placeholder="Message" onChange={this.handleMessageChange} className="form-control" id="message" defaultValue={""} required />
           </div>
-          <div className="my-3">
+          <div className="my-3" visible={this.state.posted}>
             <div className="loading">Loading</div>
             <div className="error-message" />
-            <div className="sent-message">Your message has been sent. Thank you!</div>
+            <div className="sent-message" visible={this.state.posted}>Your message has been sent. Thank you!</div>
           </div>
-          <div className="text-center"><button type="submit">Send Enquiry</button></div>
+          <div className="text-center"><button type="submit" disabled={this.state.posted}>Send Enquiry</button></div>
         </form>
       </div>
       </div>
