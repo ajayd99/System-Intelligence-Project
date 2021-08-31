@@ -22,52 +22,32 @@ function Footer(props) {
         <div className="col-lg-2 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-          <li className="bx bx-chevron-right"
+          <li 
                 className={`nav-item  ${
                   props.location.pathname === "/" ? "active" : ""
                 }`}
               >
-                <Link to="/">Home</Link>
+                <Link className="bx bx-chevron-right" to="/">Home</Link>
           </li>
-          <li className="bx bx-chevron-right"
+          <li 
                 className={`nav-item  ${
                   props.location.pathname === "/About" ? "active" : ""
                 }`}
               >
-                <Link to="/About">About</Link>
+                <Link className="bx bx-chevron-right" to="/About">About</Link>
           </li>
-          <li className="bx bx-chevron-right"
+          <li 
                 className={`nav-item  ${
                   props.location.pathname === "/Services" ? "active" : ""
                 }`}
               >
-                <Link to="/Services">Services</Link>
+                <Link className="bx bx-chevron-right" to="/Services">Services</Link>
           </li>
-          <li className="bx bx-chevron-right"
-                className={`nav-item  ${
-                  props.location.pathname === "/Home" ? "active" : ""
-                }`}
-              >
-                <Link to="/Home">Home</Link>
-          </li>
-          <li className="bx bx-chevron-right"
-                className={`nav-item  ${
-                  props.location.pathname === "/Home" ? "active" : ""
-                }`}
-              >
-                <Link to="/Home">Home</Link>
-          </li>
-          <li className="bx bx-chevron-right"
-                className={`nav-item  ${
-                  props.location.pathname === "/Home" ? "active" : ""
-                }`}
-              >
-                <Link to="/Home">Home</Link>
-          </li>
-            
+          {/*
             <li><i className="bx bx-chevron-right" /> <a href="#">Terms of service</a></li>
             
             <li><i className="bx bx-chevron-right" /> <a href="#">Privacy policy</a></li>
+          */}  
           </ul>
         </div>
         <div className="col-lg-3 col-md-6 footer-links">

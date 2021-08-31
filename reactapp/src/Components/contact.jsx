@@ -4,8 +4,10 @@ import { Link, withRouter } from "react-router-dom";
 class Contact extends React.Component {
   constructor(props) {
     super(props);
+    // Constructor passes in the values from the contact form and sets them to blank
     this.state = { name: '', email:'', phone:'', subject:'', message:'', posted:false};
 
+    //This is needed to get things to work
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
@@ -15,6 +17,7 @@ class Contact extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  //sets state using the values passed in by the form
   handleNameChange = (event) => {
     this.setState({[event.target.name]: event.target.value});
   }
@@ -31,15 +34,18 @@ class Contact extends React.Component {
     this.setState({[event.target.name]: event.target.value});
   }
 
+  // This happens when form is submitted
   handleSubmit = (event) => {
     console.log('A form was submitted: ' + JSON.stringify(this.state));
+    //This is where to find the API
     fetch('https://sil-web-cosmosdb-fa.azurewebsites.net/api/enquiry-post?clientId=default', {
+      //Post to the API
         method: 'POST',
         // We convert the React state to JSON and send it as the POST body
-        //body: JSON.stringify(this.state)
         body: JSON.stringify(this.state)
       }).then(function(response) {
         this.setState({["posted"]: true});
+        //Returns the status check and body in API
         console.log(response);
         return response.json();
       });
@@ -73,7 +79,9 @@ render(){
   <section id="contact" className="contact">
     <div className="container">
       <div>
-      <iframe style={{"border":"0","width":"100%","height":"270px"}} src="https://www.google.com/maps/embed/v1/place?q=4,+lawns+park,+north+woodchester,+gl55pp&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"frameBorder={0} allowFullScreen />
+      <iframe style={{"border":"0","width":"100%","height":"270px"}} 
+      src="https://www.google.com/maps/embed/v1/place?q=4,+lawns+park,+north+woodchester,+gl55pp&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+      frameBorder={0} allowFullScreen />
       </div>
 
       <div className="row mt-5">
@@ -101,13 +109,16 @@ render(){
         <form onSubmit={this.handleSubmit} class="php-email-form">
           <div className="row">
             <div className="col-md-6 form-group">
-              <input type="text" value={this.state.name.value} name="name" onChange={this.handleNameChange} className="form-control" id="name" placeholder="Your Name" required />
+              <input type="text" value={this.state.name.value} name="name" onChange={this.handleNameChange} className="form-control" 
+              id="name" placeholder="Your Name" required />
             </div>
             <div className="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" value={this.state.email.value} name="email" onChange={this.handleEmailChange} className="form-control" id="email" placeholder="Your Email" required />
+              <input type="email" value={this.state.email.value} name="email" onChange={this.handleEmailChange} className="form-control" 
+              id="email" placeholder="Your Email" required />
             </div>
             <div className="col-md-6 form-group mt-3 mt-md-0">
-              <input type="number" value={this.state.phone.value} name="phone" onChange={this.handlePhoneChange} className="form-control" id="phone" placeholder="Your Telephone Number" required />
+              <input type="number" value={this.state.phone.value} name="phone" onChange={this.handlePhoneChange} className="form-control" 
+              id="phone" placeholder="Your Telephone Number" required />
             </div>
             <div className="col-md-6 form-group mt-3 mt-md-0">
               <select name="subject" onChange={this.handleSubjectChange} className="form-control" id="subject" required >
@@ -123,7 +134,8 @@ render(){
             </div>
           </div>
           <div className="form-group mt-3">
-            <textarea value={this.state.message.value} name="message" rows={5} placeholder="Message" onChange={this.handleMessageChange} className="form-control" id="message" defaultValue={""} required />
+            <textarea value={this.state.message.value} name="message" rows={5} placeholder="Message" onChange={this.handleMessageChange}
+             className="form-control" id="message" defaultValue={""} required />
           </div>
           <div className="my-3" visible={this.state.posted}>
             <div className="loading">Loading</div>

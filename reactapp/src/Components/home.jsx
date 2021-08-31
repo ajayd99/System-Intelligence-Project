@@ -14,7 +14,7 @@ function Home(props) {
      
      <section id="hero">
     
-     <div id="heroCarousel" className="carousel slide carousel-fade">"
+     <div id="heroCarousel" className="carousel slide carousel-fade" >
      <ol className="carousel-indicators" id="hero-carousel-indicators"></ol>
 
      <div className="carousel-inner" role="listbox">
@@ -27,7 +27,7 @@ function Home(props) {
         <div className="col-12">
        
         <Carousel>
-          <Carousel.Item >
+          <Carousel.Item>
          
           <img
           className="d-block w-100"
@@ -40,7 +40,7 @@ function Home(props) {
               <h2 className="animate__animated animate__fadeInDown">Welcome to <span>System Intelligence</span></h2>
               <p className="animate__animated animate__fadeInUp">Providing the very best in business solutions using leading edge technology.</p>
               <ul>
-              <li
+              <li style ={{listStyleType: "none"}} 
                  className={`nav-item  ${
                   props.location.pathname === "/About" ? "active" : ""
                   }`}
@@ -68,12 +68,12 @@ function Home(props) {
               <h2 className="animate__animated animate__fadeInDown"><span>Recruitment</span></h2>
               <p className="animate__animated animate__fadeInUp">We can source staff for a variety of business needs.</p>
               <ul>
-              <li
+              <li style ={{listStyleType: "none"}} 
                  className={`nav-item  ${
                   props.location.pathname === "/About" ? "active" : ""
                   }`}
                   >
-                  <Link className="btn-get-started animate__animated animate__fadeInUp scrollto" to="/About">
+                  <Link className="btn-get-started animate__animated animate__fadeInUp scrollto" to="/Services">
                     Read more
                   </Link>
                 </li>
@@ -97,12 +97,12 @@ function Home(props) {
               <h2 className="animate__animated animate__fadeInDown"><span>Development</span></h2>
               <p className="animate__animated animate__fadeInUp">System Intelligence can provide robust, responsive and scalable applications for a range of different use cases.</p>
               <ul>
-              <li
+              <li style ={{listStyleType: "none"}} 
                  className={`nav-item  ${
                   props.location.pathname === "/About" ? "active" : ""
                   }`}
                   >
-                  <Link className="btn-get-started animate__animated animate__fadeInUp scrollto" to="/About">
+                  <Link className="btn-get-started animate__animated animate__fadeInUp scrollto" to="/Services">
                     Read more 
                   </Link>
                 </li>
