@@ -431,8 +431,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   overflow: hidden;
   border: 0;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50px;
   opacity: .6;
   transition: 0.3s;
@@ -451,6 +451,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
+  /*Needed to remove indent*/
+  margin-right: 25px;
   padding: 14px 32px;
   border-radius: 4px;
   transition: 0.5s;
@@ -465,12 +467,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .btn-get-started:hover {
   background: #df3740;
-  list-style-type: none;
+
 }
 
-#hero .btn-get-started {
-  list-style-type: none;
-}
+
 
 
 @media (max-width: 992px) {

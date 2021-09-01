@@ -43,6 +43,13 @@ function Footer(props) {
               >
                 <Link className="bx bx-chevron-right" to="/Services">Services</Link>
           </li>
+          <li 
+                className={`nav-item  ${
+                  props.location.pathname === "/Contact" ? "active" : ""
+                }`}
+              >
+                <Link className="bx bx-chevron-right" to="/Contact">Contact</Link>
+          </li>
           {/*
             <li><i className="bx bx-chevron-right" /> <a href="#">Terms of service</a></li>
             

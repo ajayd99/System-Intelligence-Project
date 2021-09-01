@@ -27,10 +27,11 @@ function Home(props) {
         <div className="col-12">
        
         <Carousel>
-          <Carousel.Item>
+          <Carousel.Item interval={10000}>
          
+         {/*Change block to 120*/}
           <img
-          className="d-block w-100"
+          className="d-block w-120"
           src= {image1}
           alt="First slide"
           />
@@ -55,9 +56,9 @@ function Home(props) {
             </div>
           </Carousel.Item>
     
-          <Carousel.Item>
+          <Carousel.Item interval={10000}>
           <img
-          className="d-block w-100"
+          className="d-block w-120"
           src= {image2}
           alt="Second slide"
           />
@@ -83,9 +84,9 @@ function Home(props) {
             </div>
           </Carousel.Item>
 
-          <Carousel.Item>
+          <Carousel.Item interval={10000}>
           <img
-          className="d-block w-100"
+          className="d-block w-120"
           src= {image3}
           alt="Third slide"
           />
@@ -111,6 +112,7 @@ function Home(props) {
             </div>
             </div>
           </Carousel.Item>
+          
         </Carousel>
         </div>
         </div>
@@ -128,11 +130,13 @@ function Home(props) {
       </div>
       </div>
       </div>
+  
       </section>
 
       <main id="main"> 
       <br></br>
-      <br></br>        
+      <br></br>  
+            
       </main>
 
   </div>
